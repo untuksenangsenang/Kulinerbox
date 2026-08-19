@@ -13,8 +13,9 @@ export function buildWhatsAppLink(params: {
 }): string {
   const { phoneNumber, packageName, quantity = "..." } = params;
   const message =
-    `Halo Kulinerbox, saya mau pesan *${packageName}* sebanyak *${quantity} pcs*. ` +
-    `Mohon info lebih lanjut mengenai ketersediaan, harga, dan pengiriman. Terima kasih 🙏`;
+    `Halo Kulinerbox! 👋\n\n` +
+    `Saya mau pesan *${packageName}* sebanyak *${quantity} pcs*.\n\n` +
+    `Mohon bantuannya.. 🙏`;
   return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 }
 

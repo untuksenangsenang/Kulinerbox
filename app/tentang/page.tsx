@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/data/site-config";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { buildGeneralWhatsAppLink } from "@/lib/whatsapp";
+import { Leaf, Clock, Coins, ShieldCheck, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Tentang Kami",
@@ -107,13 +108,15 @@ export default function TentangPage() {
           />
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { emoji: "🥬", label: "Bahan Segar", desc: "Dipilih setiap hari" },
-              { emoji: "⏰", label: "Tepat Waktu", desc: "Garansi on-time" },
-              { emoji: "💰", label: "Harga Fair", desc: "Transparan & terjangkau" },
-              { emoji: "💚", label: "Higienis", desc: "Standar kebersihan tinggi" },
+              { icon: Leaf, label: "Bahan Segar", desc: "Dipilih setiap hari" },
+              { icon: Clock, label: "Tepat Waktu", desc: "Garansi on-time" },
+              { icon: Coins, label: "Harga Fair", desc: "Transparan & terjangkau" },
+              { icon: ShieldCheck, label: "Higienis", desc: "Standar kebersihan" },
             ].map((item) => (
-              <div key={item.label} className="bg-white rounded-2xl p-5 text-center shadow-card">
-                <span className="text-3xl block mb-2">{item.emoji}</span>
+              <div key={item.label} className="bg-white rounded-2xl p-5 text-center shadow-card flex flex-col items-center">
+                <div className="w-12 h-12 rounded-xl bg-brand-primary flex items-center justify-center text-white mb-3 shadow-sm">
+                  <item.icon className="w-6 h-6" />
+                </div>
                 <p className="font-heading font-bold text-brand-dark text-sm">{item.label}</p>
                 <p className="text-brand-muted text-xs mt-0.5">{item.desc}</p>
               </div>
@@ -130,9 +133,10 @@ export default function TentangPage() {
             {deliveryAreas.map((area) => (
               <span
                 key={area}
-                className="bg-brand-cream text-brand-primary font-semibold text-sm px-5 py-2.5 rounded-full border border-brand-cream-dark"
+                className="inline-flex items-center gap-1.5 bg-brand-cream text-brand-primary font-semibold text-sm px-5 py-2.5 rounded-full border border-brand-cream-dark"
               >
-                📍 {area}
+                <MapPin className="w-4 h-4 text-brand-primary" />
+                {area}
               </span>
             ))}
           </div>
