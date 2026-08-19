@@ -12,10 +12,7 @@ export const metadata: Metadata = {
 
 const deliveryAreas = [
   "Kota Yogyakarta",
-  "Kabupaten Sleman",
   "Kabupaten Bantul",
-  "Kabupaten Kulon Progo",
-  "Kabupaten Gunungkidul",
 ];
 
 const timeline = [

@@ -21,7 +21,7 @@ export const siteConfig = {
     address: "597M+9MP, Tamanan Wetan RT 04, Tamanan, Kec. Banguntapan, Kabupaten Bantul, Daerah Istimewa Yogyakarta 55191", // [ISI DATA] isi alamat lengkap
     city: "Bantul",
     deliveryArea:
-      "Yogyakarta, Sleman, Bantul, Kulon Progo, dan Gunungkidul", // [ISI DATA]
+      "Kota Yogyakarta, Bantul", // [ISI DATA]
     operationalHours: "24 Jam", // [ISI DATA]
     leadTime: "Minimal pemesanan H-2 (2 hari sebelum acara)", // [ISI DATA]
     googleMapsEmbed: "", // [ISI DATA] embed src dari Google Maps
