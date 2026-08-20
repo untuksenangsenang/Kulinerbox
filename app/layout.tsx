@@ -32,6 +32,14 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1024,
+        height: 1024,
+        alt: `${siteConfig.name} Logo`,
+      },
+    ],
   },
   robots: {
     index: true,

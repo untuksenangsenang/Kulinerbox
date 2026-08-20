@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { buildGeneralWhatsAppLink } from "@/lib/whatsapp";
 import { siteConfig } from "@/data/site-config";
@@ -43,11 +44,14 @@ export default function Navbar() {
             className="flex items-center gap-2 group"
             aria-label="Kulinerbox – Beranda"
           >
-            <span className="w-9 h-9 rounded-xl bg-brand-primary flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-              <span className="text-white font-heading font-bold text-lg leading-none">
-                K
-              </span>
-            </span>
+            <Image
+              src="/logo.jpg"
+              alt="Kulinerbox Logo"
+              width={40}
+              height={40}
+              className="rounded-xl shadow-sm group-hover:scale-105 transition-transform object-contain"
+              priority
+            />
             <span
               className={`font-heading font-bold text-xl transition-colors ${
                 scrolled ? "text-brand-dark" : "text-white drop-shadow"
